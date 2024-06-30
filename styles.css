@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --primary-green-200: hsl(148, 38%, 91%);
+  --primary-green-600: hsl(169, 82%, 27%);
+  --primary-red: hsl(0, 66%, 54%);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-grey-500-medium: hsl(186, 15%, 59%);
+  --neutral-grey-900-darker: hsl(187, 24%, 22%);
+
+  --font-size-labels: 16px;
+
+  --font-weight-heavy: 700;
+  --font-weight-light: 400;
+
+  --border-width: 5px;
+  --inside-div-width: 20dvw;
+
+  --gap-between-divs: -20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-green-200);
+  color: var(--neutral-grey-900-darker);
+  font-family: "Karla", sans-serif;
+  font-weight: var(--font-weight-light);
+}
+
+form {
+  background-color: var(--neutral-white);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px 30px;
+  border-radius: 10px;
+
+  & h1 {
+    color: var(--neutral-grey-900-darker);
+    font-weight: var(--font-weight-heavy);
+  }
+
+  & .names-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: var(--gap-between-divs);
+    margin-bottom: 10px;
+
+    & .name {
+      display: flex;
+      flex-direction: column;
+      width: var(--inside-div-width);
+    }
+  }
+  & .email-container {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  & input {
+    border: 1px solid var(--neutral-grey-500-medium);
+    border-radius: 5px;
+    height: 4vh;
+    padding: 10px;
+  }
+
+  & #message {
+    height: 12dvh;
+  }
+
+  & label {
+    font-size: var(--font-size-labels);
+    margin-bottom: 5px;
+  }
+
+  & label::after {
+    content: "*";
+    margin-left: 1px;
+  }
+
+  & .query-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: var(--gap-between-divs);
+    margin-bottom: 10px;
+
+    & .query-option {
+      border: 1px solid var(--neutral-grey-500-medium);
+      width: var(--inside-div-width);
+      height: 6dvh;
+      border-radius: 5px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  & .consent {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+
+  & input[type="submit"] {
+    border: 0px;
+    border: 10px;
+    color: var(--neutral-white);
+    background-color: var(--primary-green-600);
+    font-weight: var(--font-weight-heavy);
+    height: 6dvh;
+  }
+
+  /* TODO: Check on this, it appears not to be working! */
+  & input:focus-visible {
+    border-color: cornflowerblue;
+  }
+
+  & .error-text,
+  .email-error,
+  .query-error,
+  .consent-error {
+    color: var(--primary-red);
+    display: none;
+  }
+}
+
+.confirmation-box {
+  display: none;
+  position: absolute;
+  z-index: 3;
+}
