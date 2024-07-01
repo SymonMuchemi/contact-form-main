@@ -15,6 +15,7 @@
     <title>Frontend Mentor | Contact form</title>
 
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <form>
@@ -24,20 +25,20 @@
         <div class="name">
           <label for="first_name">First Name</label>
           <input type="text" name="first_name" id="first_name" />
-          <p class="error-text">This field is required</p>
+          <p class="error-text" id="first_name-error">This field is required</p>
         </div>
         <div class="name">
           <label for="last_name">Last Name</label>
           <input type="text" name="last_name" id="last_name" />
-          <p class="error-text">This field is required</p>
+          <p class="error-text" id="last_name-error">This field is required</p>
         </div>
       </div>
 
       <div class="email-container">
         <label for="email">Email Address</label>
         <input type="email" name="email" id="email" />
-        <p class="email-error">Please enter a valid email address</p>
-        <p class="error-text">This field is required</p>
+        <p class="email-error" id="email-input-error">Please enter a valid email address</p>
+        <p class="error-text" id="email-error">This field is required</p>
       </div>
 
       <label for="query">Query Type</label>
@@ -61,17 +62,17 @@
           <span for="support-request">Support Request</span>
         </div>
       </div>
-      <p class="query-error">Please select a query type</p>
+      <p class="query-error" id="query-error">Please select a query type</p>
 
       <label for="Message">Message</label>
       <input type="text" name="Message" id="message" />
-      <p class="error-text">This field is required</p>
+      <p class="error-text" id="message-error">This field is required</p>
 
       <div class="consent">
         <input type="checkbox" name="consent" id="consent-box" />
         <p class="consent-message">I consent to being contacted by the team</p>
       </div>
-      <p class="consent-error">
+      <p class="consent-error" id="consent-error">
         To submit this form, please consent to being contacted
       </p>
 
