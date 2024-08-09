@@ -87,7 +87,8 @@ form {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    row-gap: var(--gap-between-divs);
+    /* row-gap: var(--gap-between-divs); */
+    gap: 10px;
     margin-bottom: 10px;
 
     & .query-option {
